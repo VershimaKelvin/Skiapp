@@ -6,9 +6,11 @@ import 'package:theme/Home.dart';
 import 'package:theme/provider/settingsProvider.dart';
 
 void main() {
+
   runApp(ChangeNotifierProvider(
     create: (BuildContext context)=>SettingsProvider(),
     child: (MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch:  Colors.purple,
           accentColor: Colors.deepPurpleAccent

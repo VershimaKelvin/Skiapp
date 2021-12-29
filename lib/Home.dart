@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:theme/provider/settingsProvider.dart';
 import 'package:theme/settings.dart';
 
 class Home extends StatelessWidget {
@@ -20,6 +22,14 @@ class Home extends StatelessWidget {
             ),
           )
         ],
+      ),
+      body: Center(
+        child: Text(
+            Provider.of<SettingsProvider>(context).getUnits(),
+          style: TextStyle(
+            color: Colors.grey,
+          ),
+        ),
       ),
     );
   }
