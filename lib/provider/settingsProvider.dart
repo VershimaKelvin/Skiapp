@@ -18,7 +18,7 @@ class SettingsProvider with ChangeNotifier{
   bool get ifSwixSelected => _ifSwixSelected;
   bool get ifTokosSelected => _ifTokosSelected;
   getUnits()=>_units;
-  getWaxlines()=>_waxLines;
+  getWaxlines(int value)=>_waxLines[value];
 
   //setters
   void setUnits(String value){
@@ -31,12 +31,12 @@ class SettingsProvider with ChangeNotifier{
     notifyListeners();
   }
 
-  set ifTokosSelected(bool value) {
+  ifTokosSelectedMethod(bool value) {
     _ifTokosSelected = value;
     notifyListeners();
   } //getters
 
-  set ifSwixSelected(bool value) {
+  ifSwixSelectedMethod(bool value) {
     _ifSwixSelected = value;
     notifyListeners();
   }

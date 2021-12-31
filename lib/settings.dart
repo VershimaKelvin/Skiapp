@@ -25,8 +25,10 @@ class Settings extends StatelessWidget {
                         Text('Units'),
                         DropdownButton<String>(
                           elevation: 0,
-                          value: 'Imperial',
-                            onChanged: (String value){},
+                          value: Provider.of<SettingsProvider>(context).getUnits(),
+                            onChanged: (String value){
+                            Provider.of<SettingsProvider>(context).setUnits(value);
+                            },
                           items: [
                             'Imperial',
                             'Metric'
@@ -57,11 +59,12 @@ class Settings extends StatelessWidget {
                               FilterChip(label: Text('Swix'),
                                   selected: Provider.of<SettingsProvider>(context).ifSwixSelected,
                                   onSelected: (bool value){
+                                    Provider.of<SettingsProvider>(context,listen: false).ifSwixSelectedMethod(value);
                                   }),
                               FilterChip(label: Text('tokos'),
                                   selected: Provider.of<SettingsProvider>(context).ifTokosSelected,
                                   onSelected: (bool value){
-                                //Provider.of<SettingsProvider>(context).ifTokosSelected(value);
+                                Provider.of<SettingsProvider>(context,listen: false).ifTokosSelectedMethod(value);
                                   })
                             ],
                           ),
