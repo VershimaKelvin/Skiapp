@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:theme/provider/settingsProvider.dart';
-import 'package:theme/settings.dart';
+import 'package:theme/UI/settings.dart';
 
 class Home extends StatelessWidget {
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

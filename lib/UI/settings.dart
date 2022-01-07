@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:theme/provider/settingsProvider.dart';
 
 class Settings extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -27,7 +28,7 @@ class Settings extends StatelessWidget {
                           elevation: 0,
                           value: Provider.of<SettingsProvider>(context).getUnits(),
                             onChanged: (String value){
-                            Provider.of<SettingsProvider>(context).setUnits(value);
+                            Provider.of<SettingsProvider>(context,listen: false).setUnits(value);
                             },
                           items: [
                             'Imperial',
