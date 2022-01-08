@@ -58,14 +58,14 @@ class Settings extends StatelessWidget {
                             runSpacing: 5.0,
                             children: [
                               FilterChip(label: Text('Swix'),
-                                  selected: Provider.of<SettingsProvider>(context).ifSwixSelected,
+                                 selected: Provider.of<SettingsProvider>(context).ifSwixSelected,
                                   onSelected: (bool value){
                                     Provider.of<SettingsProvider>(context,listen: false).ifSwixSelectedMethod(value);
                                   }),
                               FilterChip(label: Text('tokos'),
                                   selected: Provider.of<SettingsProvider>(context).ifTokosSelected,
                                   onSelected: (bool value){
-                                Provider.of<SettingsProvider>(context,listen: false).ifTokosSelectedMethod(value);
+                                   Provider.of<SettingsProvider>(context,listen: false).ifTokosSelectedMethod(value);
                                   })
                             ],
                           ),

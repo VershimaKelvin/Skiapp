@@ -13,9 +13,9 @@ class SettingsProvider with ChangeNotifier{
   SettingsProvider(){
     _units ='Imperial';
     _waxLines = ['Swix', 'Tokos'];
-    _ifTokosSelected=true;
+    _ifTokosSelected=false;
     _ifSwixSelected=false;
-    loadPreferences();
+   loadPreferences();
   }
 
   bool get ifSwixSelected => _ifSwixSelected;
@@ -59,21 +59,19 @@ class SettingsProvider with ChangeNotifier{
 
   loadPreferences()async{
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    _units=sharedPreferences.getString('units');
-    _waxLines=sharedPreferences.getStringList('waxLines');
-    _ifSwixSelected=sharedPreferences.getBool('ifSwixSelected');
-    _ifTokosSelected=sharedPreferences.getBool('ifTokosSelected');
-    if(_units != null){
-      setUnits(_units);
+    String units=sharedPreferences.getString('units');
+    List<String> waxLines=sharedPreferences.getStringList('waxLines');
+    bool ifSwixSelected=sharedPreferences.getBool('ifSwixSelected');
+    bool ifTokosSelected=sharedPreferences.getBool('ifTokosSelected');
+
+    ifSwixSelectedMethod(ifSwixSelected);
+    ifTokosSelectedMethod(ifTokosSelected);
+
+    if(units != null){
+      setUnits(units);
     }
-    if(_waxLines != null){
-      setWaxLines(_waxLines);
-    }
-    if(_ifSwixSelected != null){
-      ifSwixSelectedMethod(_ifSwixSelected);
-    }
-    if(ifTokosSelectedMethod != null){
-      ifTokosSelectedMethod(_ifTokosSelected);
+    if(waxLines != null){
+      setWaxLines(waxLines);
     }
 
 
