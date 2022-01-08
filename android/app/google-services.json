@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "407537302177",
+    "project_id": "waxapp-b3b16",
+    "storage_bucket": "waxapp-b3b16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407537302177:android:a7161cb01b61afe2610ee0",
+        "android_client_info": {
+          "package_name": "com.barefooted.theme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407537302177-o7481ek7elbe598a36ti7ir1q2cggrh7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoWb8CbbH_jXrEMYpn-m97JYesVo5ZrYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407537302177-o7481ek7elbe598a36ti7ir1q2cggrh7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
